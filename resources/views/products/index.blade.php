@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
@@ -8,7 +9,7 @@
         </div>
         <div class="pull-right">
             @can('product-create')
-            <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product </a>
+            <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
             @endcan
         </div>
     </div>
@@ -20,6 +21,7 @@
     <p>{{ $message }}</p>
 </div>
 @endif
+
 
 <table class="table table-bordered">
     <tr>
@@ -49,6 +51,7 @@
     </tr>
     @endforeach
 </table>
+
 
 {!! $products->links() !!}
 

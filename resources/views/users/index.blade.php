@@ -8,17 +8,18 @@
             <h2>Users Management</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User </a>
+            <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
         </div>
     </div>
 </div>
 
 
 @if ($message = Session::get('success'))
-    <div class="alert alert-success">
-        <p>{{ $message }}</p>
-    </div>
+<div class="alert alert-success">
+    <p>{{ $message }}</p>
+</div>
 @endif
+
 
 <table class="table table-bordered">
     <tr>
@@ -36,7 +37,7 @@
         <td>
             @if(!empty($user->getRoleNames()))
             @foreach($user->getRoleNames() as $v)
-            <label class="badge badge-success">{{ $v }}</label>
+            <label class="btn btn-success">{{ $v }}</label>
             @endforeach
             @endif
         </td>
@@ -50,6 +51,7 @@
     </tr>
     @endforeach
 </table>
+
 
 {!! $data->render() !!}
 
